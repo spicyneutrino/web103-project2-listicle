@@ -50,3 +50,5 @@ footer { padding-block: 2rem; color: var(--pico-muted-color); }
 
 .protocol-card { color: var(--pico-color); }
 .protocol-card:hover { color: var(--pico-color); }
+
+.protocol-card article p { color: var(--pico-color); }

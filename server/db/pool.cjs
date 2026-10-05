@@ -6,7 +6,7 @@ function createPool(env = process.env) {
 
   return new Pool({
     ...(connectionString ? { connectionString } : {}),
-    ...(requiresSsl ? { ssl: { rejectUnauthorized: false } } : {}),
+    ...(requiresSsl ? { ssl: { rejectUnauthorized: true } } : {}),
     max: 10,
     idleTimeoutMillis: 30_000,
     connectionTimeoutMillis: 5_000,

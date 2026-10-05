@@ -31,7 +31,7 @@ async function list() {
   const params = new URLSearchParams(new FormData(form));
   const data = await request('/api/protocols?' + params);
   if (!data) return;
-  const items = Array.isArray(data) ? data : data.protocols;
+  const items = data;
   status.textContent = items.length ? `${items.length} protocol${items.length === 1 ? '' : 's'} found` : 'No protocols match. Try another search or reset the filters.';
   content.className = 'protocol-grid';
   content.innerHTML = items.map(p => `<a class="protocol-card" href="/protocols/${encodeURIComponent(p.slug)}"><article><img src="${escapeHTML(p.image)}" alt="" width="120" height="90"><h2>${escapeHTML(p.name)}</h2><p class="chips"><span class="chip">${escapeHTML(p.layer)}</span><span class="chip">${escapeHTML(p.ports)}</span></p><p>${escapeHTML(p.purpose)}</p><span class="read-more">Explore protocol →</span></article></a>`).join('');
@@ -41,7 +41,7 @@ async function detail(slug) {
   document.querySelector('hgroup').hidden = true;
   const data = await request('/api/protocols/' + encodeURIComponent(slug));
   if (!data) return;
-  const p = data.protocol || data;
+  const p = data;
   const fullName = p.fullName || p.full_name;
   const useCases = p.useCases || p.use_cases;
   document.title = p.name + ' — Network Protocol Explorer';

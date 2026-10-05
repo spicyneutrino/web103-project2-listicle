@@ -1,0 +1,82 @@
+Render PostgreSQL database: protocol-explorer-db
+psql> SELECT * FROM protocols;
+
+-[ RECORD 1 ]------------------------------------------------------------------------------------------------------------------
+id          | 1
+slug        | http
+name        | HTTP / HTTPS
+full_name   | Hypertext Transfer Protocol / Hypertext Transfer Protocol Secure
+layer       | Application Layer
+transport   | TCP
+ports       | 80 / 443
+purpose     | Transfers web pages, API requests, and web resources
+description | HTTP is used by browsers and servers to exchange web content. HTTPS adds TLS encryption to protect communication.
+use_cases   | ["Websites", "REST APIs", "Web applications"]
+example     | Browser requests https://example.com and receives an HTTP response
+image       | /images/http.svg
+-[ RECORD 2 ]------------------------------------------------------------------------------------------------------------------
+id          | 2
+slug        | dns
+name        | DNS
+full_name   | Domain Name System
+layer       | Application Layer
+transport   | Usually UDP, sometimes TCP
+ports       | 53
+purpose     | Converts domain names into IP addresses
+description | DNS maps human-readable names such as example.com to IP addresses computers can use.
+use_cases   | ["Website navigation", "Domain lookup", "Email routing", "Service discovery"]
+example     | example.com -> DNS lookup -> IP address
+image       | /images/dns.svg
+-[ RECORD 3 ]------------------------------------------------------------------------------------------------------------------
+id          | 3
+slug        | tcp
+name        | TCP
+full_name   | Transmission Control Protocol
+layer       | Transport Layer
+transport   | TCP
+ports       | Depends on the application
+purpose     | Provides reliable, ordered communication
+description | TCP establishes a connection and provides reliable, ordered delivery with retransmission and flow control.
+use_cases   | ["HTTP/HTTPS", "SSH", "Email", "File transfer"]
+example     | SYN -> SYN-ACK -> ACK three-way handshake
+image       | /images/tcp.svg
+-[ RECORD 4 ]------------------------------------------------------------------------------------------------------------------
+id          | 4
+slug        | udp
+name        | UDP
+full_name   | User Datagram Protocol
+layer       | Transport Layer
+transport   | UDP
+ports       | Depends on the application
+purpose     | Sends data quickly without a reliable connection
+description | UDP sends datagrams without connection setup and does not guarantee delivery or ordering.
+use_cases   | ["DNS", "Video streaming", "Voice calls", "Online games"]
+example     | Real-time audio may prefer new packets over retransmitting old lost packets
+image       | /images/udp.svg
+-[ RECORD 5 ]------------------------------------------------------------------------------------------------------------------
+id          | 5
+slug        | dhcp
+name        | DHCP
+full_name   | Dynamic Host Configuration Protocol
+layer       | Application Layer
+transport   | UDP
+ports       | 67 / 68
+purpose     | Automatically configures devices on a network
+description | DHCP provides settings such as IP address, subnet mask, default gateway, and DNS server.
+use_cases   | ["Home Wi-Fi", "University networks", "Office networks", "Public Wi-Fi"]
+example     | Laptop joins Wi-Fi -> DHCP server assigns network settings
+image       | /images/dhcp.svg
+-[ RECORD 6 ]------------------------------------------------------------------------------------------------------------------
+id          | 6
+slug        | tls
+name        | TLS
+full_name   | Transport Layer Security
+layer       | Security protocol used above the transport layer
+transport   | Commonly used with TCP
+ports       | No single dedicated port; commonly used with HTTPS on 443
+purpose     | Provides encryption, authentication, and integrity
+description | TLS protects application communication and is what makes HTTPS secure.
+use_cases   | ["HTTPS websites", "Secure APIs", "Secure email connections"]
+example     | Browser and server perform a TLS handshake before encrypted communication
+image       | /images/tls.svg
+
