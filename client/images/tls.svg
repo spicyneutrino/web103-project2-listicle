@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" role="img">
+  <title>Client and server connected through an encrypted TLS lock</title>
+  <rect width="300" height="150" fill="#eef2ff"/>
+  <rect x="20" y="55" width="70" height="40" rx="6" fill="#4a63e7"/>
+  <text x="55" y="80" font-size="12" fill="#fff" text-anchor="middle">Client</text>
+  <rect x="210" y="55" width="70" height="40" rx="6" fill="#333"/>
+  <text x="245" y="80" font-size="12" fill="#fff" text-anchor="middle">Server</text>
+  <line x1="90" y1="75" x2="210" y2="75" stroke="#2e7d32" stroke-width="3" stroke-dasharray="6,4"/>
+  <rect x="135" y="60" width="30" height="24" rx="3" fill="#2e7d32"/>
+  <rect x="142" y="50" width="16" height="16" rx="8" fill="none" stroke="#2e7d32" stroke-width="4"/>
+</svg>

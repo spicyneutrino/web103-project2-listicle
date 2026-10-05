@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" role="img">
+  <title>UDP packets sent from client to server without a handshake</title>
+  <rect width="300" height="150" fill="#eef2ff"/>
+  <rect x="20" y="55" width="70" height="40" rx="6" fill="#4a63e7"/>
+  <text x="55" y="80" font-size="12" fill="#fff" text-anchor="middle">Client</text>
+  <rect x="210" y="55" width="70" height="40" rx="6" fill="#333"/>
+  <text x="245" y="80" font-size="12" fill="#fff" text-anchor="middle">Server</text>
+  <rect x="120" y="35" width="24" height="16" rx="3" fill="#e65100"/>
+  <rect x="150" y="60" width="24" height="16" rx="3" fill="#e65100"/>
+  <rect x="130" y="95" width="24" height="16" rx="3" fill="#e65100"/>
+  <line x1="90" y1="43" x2="120" y2="43" stroke="#e65100" stroke-width="2" marker-end="url(#d)"/>
+  <line x1="90" y1="68" x2="150" y2="68" stroke="#e65100" stroke-width="2" marker-end="url(#d)"/>
+  <line x1="90" y1="103" x2="130" y2="103" stroke="#e65100" stroke-width="2" marker-end="url(#d)"/>
+  <defs>
+    <marker id="d" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#e65100"/></marker>
+  </defs>
+</svg>
