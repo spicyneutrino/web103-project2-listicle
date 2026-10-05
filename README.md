@@ -42,7 +42,7 @@ Live app: https://protocol-explorer.onrender.com
 
 The frontend fetches `/api/protocols` and `/api/protocols/:slug`. Every list and detail response comes from the Render PostgreSQL `protocols` table; there is no in-memory data fallback. The schema stores identifiers, names, layer, transport, ports, purpose, description, use cases (`TEXT[]`), example, and image path. Original SVG illustrations and protocol content are retained from Unit 1.
 
-The walkthrough's table view displays actual captured output from `psql -x -c 'SELECT * FROM protocols;'` against the Render database. Credentials are excluded from git and recording. TLS certificate validation is enabled.
+The walkthrough's table view displays actual captured output from `psql -x -c 'SELECT * FROM protocols;'` against the Render database. Credentials are excluded from git and recording. External database connections validate TLS certificates. Render’s private endpoint uses its self-signed certificate; only that internal Render connection permits it.
 
 Free Render hosting can take about a minute to wake after inactivity. The free database expires November 3, 2026.
 
