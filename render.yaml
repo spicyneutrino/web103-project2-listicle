@@ -1,0 +1,23 @@
+databases:
+  - name: protocol-explorer-db
+    databaseName: protocols
+    user: protocols_user
+    plan: free
+
+services:
+  - type: web
+    name: protocol-explorer
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run db:seed && npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PGSSLMODE
+        value: require
+      - key: DATABASE_URL
+        fromDatabase:
+          name: protocol-explorer-db
+          property: connectionString

@@ -1,0 +1,21 @@
+{
+  "name": "web103-project2-listicle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Network Protocol Explorer powered by PostgreSQL",
+  "main": "server/index.cjs",
+  "scripts": {
+    "start": "node server/index.cjs",
+    "db:seed": "node server/config/seed.cjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@picocss/pico": "^2.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}
