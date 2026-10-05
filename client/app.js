@@ -11,6 +11,11 @@ async function request(url) {
   content.replaceChildren();
   try {
     const response = await fetch(url, {signal: controller.signal});
+    if (response.status === 404) {
+      status.textContent = '404 — Protocol not found';
+      content.innerHTML = '<a href="/">Back to all protocols</a>';
+      return;
+    }
     if (!response.ok) throw new Error('Request failed');
     return await response.json();
   } catch (error) {

@@ -47,3 +47,6 @@ footer { padding-block: 2rem; color: var(--pico-muted-color); }
 :focus-visible { outline: 3px solid var(--pico-primary); outline-offset: 4px; }
 @media (max-width: 650px) { .search-fields { grid-template-columns: 1fr 1fr; } .search-fields label { grid-column: 1 / -1; } .protocol-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .protocol-card article { transition: none; } .protocol-card:hover article { transform: none; } }
+
+.protocol-card { color: var(--pico-color); }
+.protocol-card:hover { color: var(--pico-color); }
